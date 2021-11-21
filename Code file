@@ -1,28 +1,23 @@
 class flashcard:
-    def __init__(self, word, meaning):
+    def init(self, word, meaning):
         self.word = word
         self.meaning = meaning
-    def __str__(self):
+    def str(self):
         
-        #we will return a string 
+        #I will return a string here
+        #keep looking if this is the right way to start
         return self.word+' ( '+self.meaning+' )'
-        
+#welcome screen         
 flash = []
-print("welcome to flashcard application")
-  
+print("welcome to flashcard app")
+#user input area  
 #the following loop will be repeated until
 #user stops to add the flashcards
 while(True):
-    word = input("enter the name you want to add to flashcard : ")
-    meaning = input("enter the meaning of the word : ")
+    word = input("enter term you want to add to flashcard : ")
+    meaning = input("enter the definition of the term : ")
       
     flash.append(flashcard(word, meaning))
     option = int(input("enter 0 , if you want to add another flashcard : "))
       
-    if(option):
-        break
-          
-# printing all the flashcards 
-print("\nYour flashcards")
-for i in flash:
-    print(">", i)
+
