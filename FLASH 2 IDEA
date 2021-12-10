@@ -1,0 +1,45 @@
+import random
+
+def print_card(content):
+    length = len(content)
+    print('+--' + '-' * length + '--+')
+    print('| ' + content + ' |')
+    print('+--' + '-' * length + '--+')
+
+def quiz(words, definitions):
+    random_index = random.randint(0, len(words) - 1)
+    word = words[random_index]
+    definition = definitions[random_index]
+    print_card(word)
+    input('Press enter to continue ')
+    print_card(definition)
+    input('Press enter to continue ')
+
+def get_card(words, definitons, card_num):
+    word = input ('Word for card' + str(card_num) + ': ')
+    definition = input ('Definition for card ' + str(card_num) +': ')
+    words.append(word)
+    definitions.append(definiton)
+
+def main():
+    words = []
+    definitions = []
+    num_cards = int(input('Enter number of flashcards to create: '))
+
+    i = 1
+    while i <= num_cards:
+        get_card(words, definitions, i)
+        i += 1
+
+    while True:
+        quiz(words, definitions)
+
+main()
+
+
+
+
+
+
+
+
